@@ -3,6 +3,7 @@ import { fetchLcboEndpoint } from "./api/lcbo.js";
 import SearchBar from "./SearchBar.js";
 import ResultsList from './ResultsList.js';
 import Map from './Map.js';
+import 'antd/dist/antd.css';
 
 
 
@@ -61,15 +62,15 @@ class App extends Component {
 
   componentDidMount() {
     // example of making an API request to the LCBO API
-    this.findProducts(null, 'radler')
+    this.findProducts(null, '')
   }
 
   render() {
     return (
       <div>
-        <p>
-          Hello World!
-        </p>
+        <h1>
+          LCBO Product Search & Locate
+        </h1>
         <SearchBar findProducts={this.findProducts} />
         <ResultsList findInventory={this.findInventory} results={this.state.results} loading={this.state.loading} />
         <Map stores={this.state.selectedStores}/>

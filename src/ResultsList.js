@@ -15,7 +15,7 @@ class ResultsList extends Component{
 
 
     if(this.props.loading){
-      return (<h1>WE ARE STILL LOADING YOUR DATA</h1>)
+      return (<h3>LOADING DATA</h3>)
     }
     else{
       return (

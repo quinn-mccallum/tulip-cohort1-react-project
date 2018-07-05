@@ -2,18 +2,13 @@ import React, { Component } from 'react';
 import { GoogleMap, withGoogleMap, Marker } from 'react-google-maps';
 
 class Map extends Component{
-  // static defaultProps = {
-  //   center: { lat: 43.6565353, lng: -79.4609571},
-  //   zoom: 8
-  // }
-
 
   render(){
 
     const MyMap = withGoogleMap(props => (
       <GoogleMap
         defaultCenter = { { lat: 43.6565353, lng: -79.4609571 } }
-        defaultZoom = { 13 }
+        defaultZoom = { 11 }
       >
 
         { this.props.stores.map(location => {
@@ -30,7 +25,7 @@ class Map extends Component{
       <div>
         booze map
         <MyMap
-          containerElement = { <div style={{height: '500px', width: '500px'}} /> }
+          containerElement = { <div style={{height: '750px', width: '1250px'}} /> }
           mapElement = { <div style={{height: '100%'}}/> }
         />
       </div>

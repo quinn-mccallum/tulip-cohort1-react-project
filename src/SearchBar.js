@@ -14,9 +14,8 @@ class SearchBar extends Component {
           <input
             value={ this.state.term }
             onChange={ (e) => this.setState({ term: e.target.value }) }/>
-          <button type='submit' />
+          <input type='submit' value='submit'/>
         </form>
-          input: { this.state.term }
       </div>
     )
   }
